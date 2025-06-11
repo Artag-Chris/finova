@@ -6,8 +6,6 @@ import { CreditSimulator } from "@/components/credit-simulator"
 import { useRef } from "react"
 // Importamos Framer Motion para las animaciones
 import { motion } from "framer-motion"
-import { AnimatedTextWithIcon } from "./animation/AnimatedTextWithIcon"
-import { TypewriterText } from "./animation/TypewriterText"
 
 export function HeroSection() {
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -350,7 +348,8 @@ export function HeroSection() {
               transition={{ duration: 0.6 }}
             >
               <motion.div className="w-2 h-2 bg-[#D0EDFC] rounded-full" animate={pulsingAnimation} />
-              <AnimatedTextWithIcon />
+              <Clock className="w-4 h-4" />
+              Respuesta en 60 segundos
               <motion.div
                 className="w-8 h-0.5 bg-[#12274B] rounded-full opacity-60"
                 animate={{
@@ -387,8 +386,8 @@ export function HeroSection() {
               </h1>
 
               <div className="flex items-center gap-4 text-[#D0EDFC] text-lg">
-                <Zap className="w-5 h-5" style={{ color: "#12274B" }} />
-                <TypewriterText />
+                <Zap className="w-5 h-5" />
+                <span>Transparencia • Cercanía • Confianza</span>
               </div>
             </motion.div>
 
@@ -401,7 +400,7 @@ export function HeroSection() {
               Sin letra pequeña, sin sorpresas. Te acompañamos con honestidad total en cada paso de tu crédito.
             </motion.p>
 
-            {/* Beneficios con animación de entrada */}
+            {/* Beneficios con animación de entrada y efectos flotantes */}
             <motion.div
               className="grid grid-cols-2 gap-4 pt-4"
               initial={{ opacity: 0, y: 30 }}
@@ -409,25 +408,93 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               {[
-                { icon: Shield, text: "100% Transparente", color: "from-[#D0EDFC] to-[#12274B]" },
-                { icon: Users, text: "Asesoría Humana", color: "from-[#12274B] to-[#4C97D2]" },
-                { icon: Calculator, text: "Sin Comisiones", color: "from-[#D0EDFC] to-[#12274B]" },
-                { icon: TrendingUp, text: "Tasas Justas", color: "from-[#12274B] to-[#D0EDFC]" },
+                {
+                  icon: Shield,
+                  text: "100% Transparente",
+                  color: "from-[#D0EDFC] to-[#12274B]",
+                  iconAnimation: {
+                    rotate: [0, -10, 10, 0],
+                    transition: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  },
+                },
+                {
+                  icon: Users,
+                  text: "Asesoría Humana",
+                  color: "from-[#12274B] to-[#4C97D2]",
+                  iconAnimation: {
+                    scale: [1, 1.1, 1],
+                    transition: { duration: 2.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  },
+                },
+                {
+                  icon: Calculator,
+                  text: "Sin Comisiones",
+                  color: "from-[#D0EDFC] to-[#12274B]",
+                  iconAnimation: {
+                    y: [0, -2, 0],
+                    transition: { duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  },
+                },
+                {
+                  icon: TrendingUp,
+                  text: "Tasas Justas",
+                  color: "from-[#12274B] to-[#D0EDFC]",
+                  iconAnimation: {
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.05, 1],
+                    transition: { duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  },
+                },
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-2xl px-4 py-3 border border-[#12274B]/20 hover:bg-white/10 transition-all duration-300 group"
+                  className="relative"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -5,
+                    transition: { duration: 0.2 },
+                  }}
                 >
-                  <div
-                    className={`w-8 h-8 rounded-lg bg-gradient-to-br ${benefit.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  {/* Efecto de flotación */}
+                  <motion.div
+                    animate={{
+                      y: [0, -3, 0],
+                      transition: {
+                        duration: 3 + index * 0.5,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "easeInOut",
+                        delay: index * 0.2,
+                      },
+                    }}
                   >
-                    <benefit.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">{benefit.text}</span>
+                    {/* Glow effect de fondo */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl blur-sm"></div>
+
+                    {/* Card principal */}
+                    <div className="relative flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-2xl px-4 py-3 border border-white/20 hover:bg-white/15 transition-all duration-300 group shadow-lg hover:shadow-xl">
+                      {/* Icono con animación individual */}
+                      <motion.div
+                        className={`w-10 h-10 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
+                        animate={benefit.iconAnimation}
+                        whileHover={{
+                          scale: 1.15,
+                          rotate: 5,
+                          transition: { duration: 0.2 },
+                        }}
+                      >
+                        <benefit.icon className="w-5 h-5 text-white drop-shadow-sm" />
+                      </motion.div>
+
+                      {/* Texto en azul oscuro */}
+                      <span className="text-sm font-semibold text-[#12274B] drop-shadow-sm">{benefit.text}</span>
+
+                      {/* Efecto de brillo en hover */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 rounded-2xl"></div>
+                    </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>
