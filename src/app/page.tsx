@@ -1,4 +1,4 @@
-import { CreditSimulator } from "@/components/credit-simulator"
+import { HeroSection } from "@/components/hero-section"
 import { AgentSection } from "@/components/agent-section"
 import { TrustElements } from "@/components/trust-elements"
 import { Navbar } from "@/components/navbar"
@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white">
-        <CreditSimulator />
+        <HeroSection />
         <AgentSection />
         <TrustElements />
       </main>
