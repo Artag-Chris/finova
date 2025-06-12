@@ -21,7 +21,7 @@ export function AnimatedTextWithIcon() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length)
-    }, 3000) // Cambia cada 3 segundos
+    }, 3000)
 
     return () => clearInterval(timer)
   }, [])
@@ -36,6 +36,12 @@ export function AnimatedTextWithIcon() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2"
+          style={{
+            background: 'linear-gradient(145deg, #E8E8E8, #D1D1D1)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '1px 1px 2px rgba(255,255,255,0.1)'
+          }}
         >
           {/* Icon */}
           <motion.div
@@ -43,9 +49,13 @@ export function AnimatedTextWithIcon() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 0.3 }}
+            className="text-[#C0C0C0] drop-shadow-[0_2px_2px_rgba(0,0,0,0.1)]"
           >
             {React.createElement(items[currentIndex].icon, {
               className: "w-4 h-4",
+              style: {
+                filter: 'drop-shadow(1px 1px 1px rgba(255,255,255,0.3))'
+              }
             })}
           </motion.div>
 
@@ -55,6 +65,7 @@ export function AnimatedTextWithIcon() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
+            className="font-medium tracking-wide"
           >
             {items[currentIndex].text}
           </motion.span>

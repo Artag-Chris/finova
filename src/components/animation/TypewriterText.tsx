@@ -8,7 +8,7 @@ export function TypewriterText() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
 
-  const text = "Transparencia • Cercanía • Confianza"
+  const text = "Honestidad • Cercanía • Confianza"
 
   useEffect(() => {
     // Cursor blinking effect

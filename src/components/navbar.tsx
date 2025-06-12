@@ -105,13 +105,13 @@ export function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-white/90 hover:text-[#12274B] font-medium transition-colors duration-200 relative group
-                  ${activeItem === item.name ? 'text-[#12274B]' : ''}`}
+                className={`text-white/90 hover:text-[#12274B] font-medium transition-colors duration-200 relative group text-lg tracking-wide
+        ${activeItem === item.name ? 'text-[#12274B]' : ''}`}
                 onClick={() => setActiveItem(item.name)}
               >
                 {item.name}
                 <div className={`absolute -bottom-1 left-0 h-0.5 bg-[#12274B] transition-all duration-300
-                  ${activeItem === item.name ? 'w-full' : 'w-0 group-hover:w-full'}`}></div>
+        ${activeItem === item.name ? 'w-full' : 'w-0 group-hover:w-full'}`}></div>
               </a>
             ))}
           </div>
@@ -121,14 +121,14 @@ export function Navbar() {
             <Button
               variant="outline"
               size="sm"
-              className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl font-semibold transition-all duration-300"
+              className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl font-semibold transition-all duration-300 text-base"
             >
               <UserPlus className="w-4 h-4 mr-2" />
               Regístrate
             </Button>
             <Button
               size="sm"
-              className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl font-semibold shadow-lg"
+              className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl font-semibold shadow-lg text-base"
             >
               Login
             </Button>
@@ -167,8 +167,8 @@ export function Navbar() {
                   <UserPlus className="w-4 h-4 mr-2" />
                   Regístrate
                 </Button>
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
