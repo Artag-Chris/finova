@@ -66,18 +66,18 @@ export function TrustElements() {
 
   const certifications = [
     {
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "/camara_1.png",
       name: "Cámara de Comercio de Pereira",
       description: "Verificados y registrados oficialmente",
     },
     {
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "/super_1.png",
       name: "Supersolidaria",
       description: "Vigilados por entidades reguladoras",
     },
     {
-      logo: "/placeholder.svg?height=80&width=160",
-      name: "DataCrédito",
+      logo: "/trans_union_1.png",
+      name: "TransUnion",
       description: "Aliados oficiales para historial crediticio",
     },
   ]
