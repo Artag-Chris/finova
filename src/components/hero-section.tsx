@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ShieldCheck, Users, Zap, Calculator, ChartNoAxesCombined, ArrowRight, UserPen } from "lucide-react"
+import { ShieldCheck, Users, Calculator, ChartNoAxesCombined, ArrowRight, UserPen, Handshake } from "lucide-react"
 import { CreditSimulator } from "@/components/credit-simulator"
 import { useRef } from "react"
 import { motion } from "framer-motion"
@@ -36,7 +36,7 @@ export function HeroSection() {
     {
       icon: ShieldCheck,
       text: "100% Transparente",
-      color: "from-[#D0EDFC] to-[#12274B]",
+      color: "from-[#12274B] to-[#D0EDFC]", //aqui se cambia el background
       animation: {
         rotate: [0, -10, 10, 0],
         transition: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
@@ -45,7 +45,7 @@ export function HeroSection() {
     {
       icon: Users,
       text: "Asesoría Humana",
-      color: "from-[#D0EDFC] to-[#12274B]",
+      color: "from-[#12274B] to-[#D0EDFC]",
       animation: {
         scale: [1, 1.1, 1],
         transition: { duration: 2.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
@@ -54,7 +54,7 @@ export function HeroSection() {
     {
       icon: Calculator,
       text: "Sin Comisiones",
-      color: "from-[#D0EDFC] to-[#12274B]",
+      color: "from-[#12274B] to-[#D0EDFC]",
       animation: {
         y: [0, -2, 0],
         transition: { duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
@@ -118,7 +118,7 @@ export function HeroSection() {
 
             {/* Typewriter text */}
             <div className="flex items-center gap-4 text-[#D0EDFC] text-lg">
-              <Zap className="w-5 h-5" style={{ color: "#12274B" }} />
+              <Handshake className="w-5 h-5 text-amber-400" />
               <TypewriterText />
             </div>
 
@@ -129,7 +129,13 @@ export function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Sin letra pequeña, sin sorpresas. Te acompañamos con honestidad desde la primera consulta hasta el último pago.
+              <span className="">
+                Financiación ágil 100% online:
+              </span>
+              <br />
+              - desde tu casa a tu cuenta en horas
+              Sin letra pequeña,
+              <br /> - sin esperas. Te guiamos con claridad en cada paso <br />- desde la solicitud hasta el desembolso express.
             </motion.p>
 
             {/* Benefits grid */}
@@ -175,12 +181,12 @@ export function HeroSection() {
                           className={`w-10 h-10 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg`}
                           animate={benefit.animation}
                         >
-                          <benefit.icon className="w-5 h-5 text-white" />
+                          <benefit.icon className="w-5 h-5 text-amber-400" />
                         </motion.div>
 
                         {/* Text with metallic effect */}
                         <span
-                          className="text-base font-semibold tracking-wide"
+                          className="text-base font-semibold tracking-wide "
                           style={{
                             background: 'linear-gradient(145deg, #E8E8E8, #C0C0C0)',
                             WebkitBackgroundClip: 'text',
@@ -218,11 +224,11 @@ export function HeroSection() {
     w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                <UserPen className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="whitespace-nowrap">
+                <UserPen className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform duration-300 text-amber-400" />
+                <span className="whitespace-nowrap ">
                   Comienza aquí: fácil, claro y seguro
                 </span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 text-amber-400" />
               </Button>
             </motion.div>
           </div>

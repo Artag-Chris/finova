@@ -49,7 +49,7 @@ export function AnimatedTextWithIcon() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-[#C0C0C0] drop-shadow-[0_2px_2px_rgba(0,0,0,0.1)]"
+            className="text-amber-400 drop-shadow-[0_2px_2px_rgba(0,0,0,0.1)]"
           >
             {React.createElement(items[currentIndex].icon, {
               className: "w-4 h-4",
