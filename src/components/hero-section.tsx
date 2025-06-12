@@ -6,6 +6,8 @@ import { CreditSimulator } from "@/components/credit-simulator"
 import { useRef } from "react"
 // Importamos Framer Motion para las animaciones
 import { motion } from "framer-motion"
+import { AnimatedTextWithIcon } from "./animation/AnimatedTextWithIcon"
+import { TypewriterText } from "./animation/TypewriterText"
 
 export function HeroSection() {
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -348,8 +350,7 @@ export function HeroSection() {
               transition={{ duration: 0.6 }}
             >
               <motion.div className="w-2 h-2 bg-[#D0EDFC] rounded-full" animate={pulsingAnimation} />
-              <Clock className="w-4 h-4" />
-              Respuesta en 60 segundos
+              <AnimatedTextWithIcon/>
               <motion.div
                 className="w-8 h-0.5 bg-[#12274B] rounded-full opacity-60"
                 animate={{
@@ -386,8 +387,8 @@ export function HeroSection() {
               </h1>
 
               <div className="flex items-center gap-4 text-[#D0EDFC] text-lg">
-                <Zap className="w-5 h-5" />
-                <span>Transparencia • Cercanía • Confianza</span>
+                <Zap className="w-5 h-5" style={{ color: "#12274B" }} />
+                <TypewriterText />
               </div>
             </motion.div>
 
