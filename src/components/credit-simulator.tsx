@@ -150,7 +150,7 @@ export function CreditSimulator({ className = "" }: CreditSimulatorProps) {
         {/* CTAs del simulador con color oscuro */}
         <div className="space-y-3">
           <Button
-          onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
+            onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
             size="lg"
             className="w-full group relative overflow-hidden bg-gradient-to-r from-[#12274B] to-[#2A7ABF] hover:from-[#2A7ABF] hover:to-[#12274B] text-white font-bold py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-[1.02]"
           >
@@ -162,18 +162,18 @@ export function CreditSimulator({ className = "" }: CreditSimulatorProps) {
           </Button>
 
           <Button
-  variant="outline"
-  size="lg"
-  className="w-full border-2 border-[#12274B] text-[#12274B] bg-white/10 hover:bg-[#12274B] hover:text-white font-semibold py-4 rounded-2xl text-lg transition-all duration-300 backdrop-blur-sm group"
-  onClick={() => window.open(`https://wa.me/573226962139?text=${encodeURIComponent('¡Hola! Me interesa obtener más información sobre los créditos de Finova.')}`, '_blank')}
-  aria-label="Contactar por WhatsApp"
->
-  <div className="flex items-center justify-center gap-2">
-    {/* You might need to import the MessageCircle icon from lucide-react */}
-    <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 text-amber-400" />
-    <span>Hablar con un Asesor Real</span>
-  </div>
-</Button>
+            variant="outline"
+            size="lg"
+            className="w-full border-2 border-[#12274B] text-[#12274B] bg-white/10 hover:bg-[#12274B] hover:text-white font-semibold py-4 rounded-2xl text-lg transition-all duration-300 backdrop-blur-sm group"
+            onClick={() => window.open(`https://wa.me/573226962139?text=${encodeURIComponent('¡Hola! Me interesa obtener más información sobre los créditos de Finova.')}`, '_blank')}
+            aria-label="Contactar por WhatsApp"
+          >
+            <div className="flex items-center justify-center gap-2">
+              {/* You might need to import the MessageCircle icon from lucide-react */}
+              <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 text-amber-400" />
+              <span>Hablar con un Asesor Real</span>
+            </div>
+          </Button>
         </div>
 
         <p className="text-xs text-center text-white/60 leading-relaxed">

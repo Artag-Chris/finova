@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, UserPlus, MessageCircle } from "lucide-react"
+import { Menu, X, UserPlus, } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -27,7 +27,6 @@ export function Navbar() {
   useEffect(() => {
     if (typeof window === "undefined") return
 
-    const navbar = navbarRef.current
     const navbarBg = navbarBgRef.current
 
     const tl = gsap.timeline({

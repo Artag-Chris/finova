@@ -1,8 +1,8 @@
 import { HeroSection } from "@/components/hero-section"
-import { AgentSection } from "@/components/agent-section"
 import { TrustElements } from "@/components/trust-elements"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import BenefitsSection from "@/components/benefits-section"
 
 export default function HomePage() {
   return (
@@ -10,7 +10,7 @@ export default function HomePage() {
       <Navbar />
       <main className="min-h-screen bg-white">
         <HeroSection />
-        <AgentSection />
+        <BenefitsSection />
         <TrustElements />
       </main>
       <Footer />
