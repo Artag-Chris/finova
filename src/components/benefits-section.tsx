@@ -146,7 +146,7 @@ export default function BenefitsSection() {
                     <div className="inline-flex items-center gap-3 bg-[#D0EDFC] rounded-2xl px-8 py-4">
                         <Users className="w-6 h-6 text-[#2A7ABF]" />
                         <span className="text-[#12274B] font-semibold">
-                            Únete a <span className="text-[#2A7ABF] font-bold">5.000 emprendedores</span> que eligieron Finova
+                            Únete a <span className="text-amber-400 font-bold">5.000 emprendedores</span> que eligieron Finova
                         </span>
                     </div>
                 </div>

@@ -123,7 +123,7 @@ export function Navbar() {
               size="sm"
               className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl font-semibold transition-all duration-300 text-base"
             >
-              <UserPlus className="w-4 h-4 mr-2" />
+              <UserPlus className="w-4 h-4 mr-2 text-amber-400" />
               Regístrate
             </Button>
             <Button
@@ -166,7 +166,7 @@ export function Navbar() {
                   size="sm"
                   className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl"
                 >
-                  <UserPlus className="w-4 h-4 mr-2" />
+                  <UserPlus className="w-4 h-4 mr-2 text-amber-400" />
                   Regístrate
                 </Button>
                 <Button
