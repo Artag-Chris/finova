@@ -9,11 +9,18 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white">
-        <HeroSection />
-        <BenefitsSection />
-        <TrustElements />
+        <section id="inicio">
+          <HeroSection />
+        </section>
+        <section id="creditos">
+          <BenefitsSection />
+        </section>
+        <section id="nosotros">
+          <TrustElements />
+        </section>
       </main>
       <Footer />
+    
     </>
   )
 }

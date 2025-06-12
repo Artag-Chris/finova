@@ -214,25 +214,25 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-             <Button
-  size="lg"
-  className="group relative overflow-hidden bg-gradient-to-r from-[#12274B] to-[#2A7ABF] hover:from-[#2A7ABF] hover:to-[#12274B] text-white font-bold 
+              <Button
+                size="lg"
+                className="group relative overflow-hidden bg-gradient-to-r from-[#12274B] to-[#2A7ABF] hover:from-[#2A7ABF] hover:to-[#12274B] text-white font-bold 
     px-4 sm:px-6 md:px-8 
     py-2 sm:py-3 md:py-4 
     text-sm sm:text-base md:text-lg 
     rounded-full shadow-2xl hover:shadow-[#12274B]/25 transition-all duration-500 transform hover:scale-105 border-2 border-white/20
     w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3"
-  onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
-  // Add these attributes for better accessibility and security
-  aria-label="Registrarse en Finova"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-  <UserPen className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform duration-300 text-amber-400" />
-  <span className="whitespace-nowrap">
-    Comienza aquí: fácil, claro y seguro
-  </span>
-  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 text-amber-400" />
-</Button>
+                onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
+                // Add these attributes for better accessibility and security
+                aria-label="Registrarse en Finova"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <UserPen className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform duration-300 text-amber-400" />
+                <span className="whitespace-nowrap">
+                  Comienza aquí: fácil, claro y seguro
+                </span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 text-amber-400" />
+              </Button>
             </motion.div>
           </div>
 
