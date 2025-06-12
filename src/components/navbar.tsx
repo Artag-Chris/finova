@@ -119,6 +119,7 @@ export function Navbar() {
           {/* CTAs Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
+             onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
               variant="outline"
               size="sm"
               className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl font-semibold transition-all duration-300 text-base"
@@ -127,6 +128,7 @@ export function Navbar() {
               Regístrate
             </Button>
             <Button
+            onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
               size="sm"
               className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl font-semibold shadow-lg text-base"
             >
@@ -160,6 +162,7 @@ export function Navbar() {
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-white/20">
                 <Button
+                  onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
                   variant="outline"
                   size="sm"
                   className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl"
@@ -168,11 +171,11 @@ export function Navbar() {
                   Regístrate
                 </Button>
                 <Button
+                onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
                   size="sm"
                   className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Chat
+                  login
                 </Button>
               </div>
             </div>
