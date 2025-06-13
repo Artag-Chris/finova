@@ -16,6 +16,8 @@
     "framer-motion": "^12.17.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.514.0",
+    "media-query-types": "^1.0.0",
+    "mediaquery": "^0.0.4",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

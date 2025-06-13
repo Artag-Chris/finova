@@ -160,9 +160,9 @@ export function Footer() {
 
           <div className="flex items-center">
             <Image
-              src="/path-to-image.png"
+              src="/bloque531.png"
               alt="Description"
-              width={60}
+              width={160}
               height={60}
               className="your-existing-classes"
             />
