@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import BenefitsSection from "@/components/benefits-section"
 
+
 export default function HomePage() {
   return (
     <>
@@ -15,12 +16,11 @@ export default function HomePage() {
         <section id="creditos">
           <BenefitsSection />
         </section>
-        <section id="nosotros">
+        <section id="Tu Trayecto Seguro">
           <TrustElements />
         </section>
       </main>
       <Footer />
-    
     </>
   )
 }

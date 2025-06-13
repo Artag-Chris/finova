@@ -20,9 +20,9 @@ export function Navbar() {
   const menuItems = [
     { name: "Inicio", href: "#inicio" },
     { name: "Créditos", href: "#creditos" },
-    { name: "Nosotros", href: "#nosotros" },
-    { name: "Testimonios", href: "#testimonios" },
-    { name: "Contacto", href: "#contacto" },
+    { name: "Nosotros", href: "/nosotros" },
+    // { name: "Testimonios", href: "#testimonios" },
+    { name: "Tu Trayecto Seguro", href: "#Tu Trayecto Seguro " },
   ]
 
   useEffect(() => {
