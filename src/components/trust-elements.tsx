@@ -262,8 +262,8 @@ export function TrustElements() {
           <div className="inline-block bg-gradient-to-r from-[#2A7ABF] to-[#4C97D2] rounded-2xl p-[2px]">
             <div className="bg-white rounded-2xl px-8 py-4">
               <p className="text-lg font-semibold text-[#12274B]">
-                "En Finova no vendemos créditos;{" "}
-                <span className="text-amber-400">construimos confianza con hechos</span>."
+                &ldquo;En Finova no vendemos créditos;{" "}
+                <span className="text-amber-400">construimos confianza con hechos</span>.&rdquo;
               </p>
             </div>
           </div>

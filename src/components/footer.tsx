@@ -159,10 +159,12 @@ export function Footer() {
           <p className="text-white/60 text-sm">© 2025 Finova. Todos los derechos reservados.</p>
 
           <div className="flex items-center">
-            <img
-              src="/placeholder.svg?height=30&width=120"
-              alt="Superintendencia Financiera de Colombia"
-              className="h-6 opacity-70 hover:opacity-100 transition-opacity"
+            <Image
+              src="/path-to-image.png"
+              alt="Description"
+              width={60}
+              height={60}
+              className="your-existing-classes"
             />
             <span className="text-white/60 text-xs ml-2">Vigilado por la Superintendencia Financiera de Colombia</span>
           </div>

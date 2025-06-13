@@ -67,7 +67,7 @@ export function Navbar() {
       tl.kill()
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [menuItems])
+  }, [])
 
   return (
     <nav ref={navbarRef} className="sticky top-0 z-50 overflow-hidden">
