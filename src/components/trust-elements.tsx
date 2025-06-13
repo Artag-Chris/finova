@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Shield, Users, TrendingUp, CheckCircle, MapPin, Coffee, CreditCard, Building, BadgeCheck } from "lucide-react"
 import { useState } from "react"
+import Image from 'next/image'
 
 export function TrustElements() {
   const [activeTab, setActiveTab] = useState("garantias")
@@ -240,7 +241,7 @@ export function TrustElements() {
                     className="text-center bg-[#D0EDFC]/10 rounded-2xl p-6 hover:shadow-md transition-all"
                   >
                     <div className="h-20 flex items-center justify-center mb-4">
-                      <img
+                      <Image
                         src={cert.logo || "/placeholder.svg"}
                         alt={cert.name}
                         className="max-h-full object-contain"

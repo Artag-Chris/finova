@@ -12,14 +12,14 @@ export function HeroSection() {
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   // Animations configuration
-  const floatingAnimation = {
-    y: [-10, 10, -10],
-    transition: {
-      duration: 4,
-      repeat: Number.POSITIVE_INFINITY,
-      ease: "easeInOut",
-    },
-  }
+  // const floatingAnimation = {
+  //   y: [-10, 10, -10],
+  //   transition: {
+  //     duration: 4,
+  //     repeat: Number.POSITIVE_INFINITY,
+  //     ease: "easeInOut",
+  //   },
+  // }
 
   const pulsingAnimation = {
     scale: [1, 1.2, 1],

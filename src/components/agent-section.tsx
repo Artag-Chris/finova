@@ -3,32 +3,32 @@
 // import { MessageCircle, Star, Phone, Users } from "lucide-react"
 
 export function AgentSection() {
-  const agents = [
-    {
-      name: "Carla Mendoza",
-      role: "Especialista en Créditos Personales",
-      image: "/placeholder.svg?height=120&width=120",
-      quote: "Te ayudo sin tecnicismos, con palabras claras y soluciones reales.",
-      rating: 4.9,
-      experience: "5 años",
-    },
-    {
-      name: "Roberto Silva",
-      role: "Asesor Senior",
-      image: "/placeholder.svg?height=120&width=120",
-      quote: "Cada situación es única. Encontremos juntos tu mejor opción.",
-      rating: 4.8,
-      experience: "8 años",
-    },
-    {
-      name: "Ana García",
-      role: "Consultora Financiera",
-      image: "/placeholder.svg?height=120&width=120",
-      quote: "Mi compromiso es que entiendas cada paso del proceso.",
-      rating: 5.0,
-      experience: "6 años",
-    },
-  ]
+  // const agents = [
+  //   {
+  //     name: "Carla Mendoza",
+  //     role: "Especialista en Créditos Personales",
+  //     image: "/placeholder.svg?height=120&width=120",
+  //     quote: "Te ayudo sin tecnicismos, con palabras claras y soluciones reales.",
+  //     rating: 4.9,
+  //     experience: "5 años",
+  //   },
+  //   {
+  //     name: "Roberto Silva",
+  //     role: "Asesor Senior",
+  //     image: "/placeholder.svg?height=120&width=120",
+  //     quote: "Cada situación es única. Encontremos juntos tu mejor opción.",
+  //     rating: 4.8,
+  //     experience: "8 años",
+  //   },
+  //   {
+  //     name: "Ana García",
+  //     role: "Consultora Financiera",
+  //     image: "/placeholder.svg?height=120&width=120",
+  //     quote: "Mi compromiso es que entiendas cada paso del proceso.",
+  //     rating: 5.0,
+  //     experience: "6 años",
+  //   },
+  // ]
 
   return (
     <>
