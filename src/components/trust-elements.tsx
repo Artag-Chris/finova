@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Shield, Users, TrendingUp, CheckCircle, MapPin, Coffee, CreditCard, Building, BadgeCheck } from "lucide-react"
 import { useState } from "react"
 import Image from 'next/image'
+import { LucideProps } from 'lucide-react'
 
 export function TrustElements() {
   const [activeTab, setActiveTab] = useState("garantias")
@@ -273,7 +274,7 @@ export function TrustElements() {
 }
 
 // Iconos adicionales necesarios
-function Calculator(props: any) {
+function Calculator(props: LucideProps) {
   return (
     <svg
       {...props}
@@ -301,7 +302,7 @@ function Calculator(props: any) {
   )
 }
 
-function FileText(props: any) {
+function FileText(props: LucideProps) {
   return (
     <svg
       {...props}

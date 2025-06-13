@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, UserPlus, } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Image from 'next/image'
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -66,7 +67,7 @@ export function Navbar() {
       tl.kill()
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [])
+  }, [menuItems])
 
   return (
     <nav ref={navbarRef} className="sticky top-0 z-50 overflow-hidden">
@@ -91,10 +92,13 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo Real de Finova */}
           <div className="flex items-center">
-            <img
+            <Image
               src="/finovasinfondo.png"
               alt="Finova Logo"
-              className="h-60 w-auto mr-3"
+              width={240}
+              height={60}
+              className="h-60 w-auto"
+              priority
             />
           </div>
 
@@ -118,7 +122,7 @@ export function Navbar() {
           {/* CTAs Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
-             onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
+              onClick={() => window.open('https://app.finova.com.co/auth/register', '_blank')}
               variant="outline"
               size="sm"
               className="border-[#12274B] text-[#12274B] bg-white/90 hover:bg-[#12274B] hover:text-white rounded-xl font-semibold transition-all duration-300 text-base"
@@ -127,7 +131,7 @@ export function Navbar() {
               Regístrate
             </Button>
             <Button
-            onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
+              onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
               size="sm"
               className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl font-semibold shadow-lg text-base"
             >
@@ -170,7 +174,7 @@ export function Navbar() {
                   Regístrate
                 </Button>
                 <Button
-                onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
+                  onClick={() => window.open('https://app.finova.com.co/auth/boxed-signin', '_blank')}
                   size="sm"
                   className="bg-[#12274B] hover:bg-[#12274B]/80 text-white rounded-xl"
                 >

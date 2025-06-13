@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, MessageCircle, ExternalLink, ChevronRight, Phone } from "lucide-react"
 import { SocialButtons } from "./social-buttons"
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -19,7 +20,14 @@ export function Footer() {
           <div className="md:col-span-4 space-y-6">
             {/* Logo con espacio bien definido */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center h-32 w-full">
-              <img src="/finovasinfondo.png" alt="Finova Logo" className="h-full w-auto object-contain" />
+              <Image
+                src="/finovasinfondo.png"
+                alt="Finova Logo"
+                width={240}
+                height={60}
+                className="h-60 w-auto"
+                priority
+              />
             </div>
 
             <p className="text-white/80 text-sm leading-relaxed">
