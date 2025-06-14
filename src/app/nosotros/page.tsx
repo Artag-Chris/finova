@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Star, Heart, ArrowLeft } from "lucide-react"
+import { MessageCircle, ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import { TestimonialsSection } from "@/components/testimonials-section"
 
@@ -128,7 +128,7 @@ export default function Page() {
       // ========================================
 
       // 1. Establecer estado inicial: todos los textos empiezan opacos (grises)
-      scrollTextRefs.current.forEach((textRef, index) => {
+      scrollTextRefs.current.forEach((textRef,) => {
         if (textRef) {
           // Estado inicial
           gsap.set(textRef, {
@@ -311,10 +311,10 @@ export default function Page() {
 
             <div className="max-w-2xl">
               <p ref={subtitleRef} className="text-xl lg:text-2xl text-white/100 leading-relaxed">
-                "Detrás de cada crédito, hay corazones que trabajan unidos
+                &ldquo;Detrás de cada crédito, hay corazones que trabajan unidos
                 <br />
                 Nos enorgullece acompañarte: con cuidado artesanal, paciencia de aliado y la certeza de que tu éxito es
-                también el nuestro."
+                también el nuestro.&rdquo;
               </p>
             </div>
           </div>
