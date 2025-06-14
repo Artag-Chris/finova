@@ -35,7 +35,7 @@ export function TestimonialsSection() {
             name: "Carlos J.",
             occupation: "Padre de familia",
             city: "Bogotá",
-            photo: "/placeholder.svg?height=120&width=120",
+            photo: "/primera.jpg",
             impactPhrase: "Mi hijo tuvo su cirugía a tiempo",
             beforeSituation: "Rechazado en su EPS",
             afterSituation: "Finova desembolsó en 3 horas",
@@ -52,7 +52,7 @@ export function TestimonialsSection() {
             name: "María Elena R.",
             occupation: "Enfermera",
             city: "Medellín",
-            photo: "/placeholder.svg?height=120&width=120",
+            photo: "/segunda.jpg",
             impactPhrase: "Ahora duermo tranquila, no con facturas bajo la almohada",
             beforeSituation: "Deudas acumuladas por 6 meses",
             afterSituation: "Refinanció todo en una sola cuota",
@@ -138,7 +138,7 @@ export function TestimonialsSection() {
             name: "Shion de Aries. `Arlex`",
             occupation: "Gran Patriarca",
             city: "Grecia",
-            photo: "/placeholder.svg?height=120&width=120",
+            photo: "/arlex.jpg",
             impactPhrase: "Ahora duermo tranquilo, sin esa molesta Athena",
             beforeSituation: "Deudas acumuladas por 6 meses",
             afterSituation: "Refinanció todo en una sola cuota",
@@ -421,7 +421,7 @@ export function TestimonialsSection() {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="border-2 border-[#D0EDFC] text-[#D0EDFC] hover:bg-[#D0EDFC] hover:text-[#12274B] font-semibold px-8 py-4 rounded-2xl text-lg transition-all duration-300"
+                                className="border-2 border-[#D0EDFC] text-[#12274B] hover:bg-[#D0EDFC] hover:text-[#12274B] font-semibold px-8 py-4 rounded-2xl text-lg transition-all duration-300"
                                 onClick={() => {
                                     // Scroll to top of testimonials to see more categories
                                     sectionRef.current?.scrollIntoView({ behavior: "smooth" })
