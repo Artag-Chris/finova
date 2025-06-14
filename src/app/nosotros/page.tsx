@@ -26,7 +26,7 @@ export default function Page() {
     {
       name: "Carla",
       role: "Especialista en créditos personales",
-      image:"/feliz2.jpg",
+      image: "/feliz2.jpg",
       story:
         "Creo firmemente que los procesos financieros deben ser simples y transparentes. Sin letra pequeña, sin sorpresas.",
       quote: "Me irritan los trámites engorrosos, por eso hago créditos simples",
@@ -219,7 +219,7 @@ export default function Page() {
                       className="text-xl lg:text-2xl font-medium text-[#D0EDFC] italic"
                       style={{ fontFamily: "cursive" }}
                     >
-                      "{agent.quote}"
+                      &ldquo;{agent.quote}&rdquo;
                     </p>
                   </blockquote>
 
@@ -228,9 +228,8 @@ export default function Page() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`w-5 h-5 ${
-                            i < Math.floor(agent.rating) ? "text-yellow-400 fill-current" : "text-gray-600"
-                          }`}
+                          className={`w-5 h-5 ${i < Math.floor(agent.rating) ? "text-yellow-400 fill-current" : "text-gray-600"
+                            }`}
                         />
                       ))}
                     </div>
@@ -305,7 +304,7 @@ export default function Page() {
                     ))}
                   </div>
 
-                  <p className="text-white/90 italic leading-relaxed">"{client.testimonial}"</p>
+                  &ldquo;{client.testimonial}&rdquo;
 
                   <div className="text-center">
                     <p className="font-semibold text-[#D0EDFC]">{client.name}</p>
