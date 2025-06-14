@@ -331,9 +331,9 @@ export function TestimonialsSection() {
 
                                 {/* Frase impactante */}
                                 <div className="relative">
-                                    <div className="absolute -left-2 -top-2 text-4xl text-[#2A7ABF]/30 font-serif">"</div>
+                                    <div className="absolute -left-2 -top-2 text-4xl text-[#2A7ABF]/90 font-serif"> &ldquo;</div>
                                     <p className="text-xl font-bold text-[#D0EDFC] leading-tight pl-4">{testimonial.impactPhrase}</p>
-                                    <div className="absolute -right-2 -bottom-2 text-4xl text-[#2A7ABF]/30 font-serif">"</div>
+                                    <div className="absolute -right-2 -bottom-2 text-4xl text-[#2A7ABF]/90 font-serif"> &rdquo;</div>
                                 </div>
 
                                 {/* Antes/Después */}
