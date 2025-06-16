@@ -21,7 +21,7 @@ export function Footer() {
             {/* Logo con espacio bien definido */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center h-32 w-full">
               <Image
-                src="/finovasinfondo.png"
+                src="/LOGO FINOVA_Mesa de trabajo 1.png"
                 alt="Finova Logo"
                 width={240}
                 height={60}
