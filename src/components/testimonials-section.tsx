@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Star, Heart, CheckCircle, X, Sparkles, TrendingUp, Users } from "lucide-react"
 import Image from "next/image"
+import { ProfessionalAnimatedBackground } from "./animetedBackground"
 
 interface Testimonial {
     id: number
@@ -216,10 +217,11 @@ export function TestimonialsSection() {
     return (
         <section ref={sectionRef} className="py-20 bg-[#12274B] text-white relative overflow-hidden">
             {/* Formas orgánicas de fondo */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-10 right-10 w-60 h-40 bg-[#D0EDFC] rounded-full blur-3xl opacity-20"></div>
-                <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2A7ABF]/10 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-[#10B981]/10 rounded-full blur-2xl"></div>
+            <div className="fixed inset-0 w-screen h-screen">
+                <ProfessionalAnimatedBackground
+                    opacity={0.3}
+                    intensity="high"
+                />
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -252,8 +254,8 @@ export function TestimonialsSection() {
                                 key={category.id}
                                 onClick={() => setSelectedCategory(category.id)}
                                 className={`group relative overflow-hidden rounded-2xl px-6 py-4 transition-all duration-300 ${selectedCategory === category.id
-                                        ? "bg-white/10 backdrop-blur-sm border-2 border-white/20"
-                                        : "bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10"
+                                    ? "bg-white/10 backdrop-blur-sm border-2 border-white/20"
+                                    : "bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10"
                                     }`}
                             >
                                 <div className="flex items-center gap-3">
@@ -402,7 +404,7 @@ export function TestimonialsSection() {
                     <div className="inline-block bg-gradient-to-r from-[#2A7ABF]/20 to-[#4C97D2]/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
                         <h3 className="text-3xl font-bold text-white mb-4">
                             &ldquo;¿Listo para escribir tu historia de éxito?&rdquo;
-                            </h3>
+                        </h3>
                         <p className="text-white/80 mb-8 max-w-2xl mx-auto">
                             Únete a cientos de colombianos que ya transformaron su realidad financiera con Finova. Tu historia de
                             éxito está a un clic de distancia.
