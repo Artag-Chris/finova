@@ -22,7 +22,7 @@ export function Navbar() {
     { name: "Créditos", href: "#creditos" },
     { name: "Nosotros", href: "/nosotros" },
     // { name: "Testimonios", href: "#testimonios" },
-    { name: "Tu Trayecto Seguro", href: "#Tu Trayecto Seguro " },
+    { name: "Tu Trayecto Seguro", href: "#Tu Trayecto Seguro" },
   ]
 
   useEffect(() => {
